@@ -1,0 +1,85 @@
+@import settings
+
+html
+  scroll-behavior: smooth
+
+*, ::before, ::after
+  box-sizing: border-box
+
+body
+  margin: 0
+  font-weight: 400
+  line-height: 1.6
+  max-width: 100vw
+  transition: all .5s ease
+
+  &.dark
+    background: $bg-black
+    .section
+      background: initial
+      .wrapper
+        max-width: 320px
+        margin: 0 auto
+        width: 100%
+
+.section
+  .wrapper
+    max-width: 320px
+    margin: 0 auto
+    width: 100%
+    .top
+      border: 2px solid $blue
+      padding: 3px 6px
+      border-radius: 50px
+      display: flex
+      align-items: center
+      margin: 0 auto
+      justify-content: center
+      div
+        font-family: $rr
+        font-weight: 500
+        font-size: 24px
+        margin-left: 8px
+    .timer
+      margin: 32px 0
+
+      span
+        text-align: center
+        display: block
+        line-height: 217.6px
+        font-family: $rr
+        font-weight: 200
+        +r(576)
+          font-size: 256px
+        +r(0, 575)
+          font-size: 236px
+      &.started
+        span
+          font-weight: 800
+
+  li
+    list-style-type: none
+
+  a
+    text-decoration: none
+
+  .buttonList
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    button
+      display: flex
+      align-items: center
+      justify-content: center
+      cursor: pointer
+      border: none
+      border-radius: 32px
+      max-width: 128px
+      height: 96px
+      width: 100%
+      &:first-of-type,
+      &:last-of-type
+        border-radius: 24px
+        width: 80px
+        height: 80px

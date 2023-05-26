@@ -1,0 +1,51 @@
+@import ../../styles/settings
+
+.longBreak
+  height: 100vh
+  display: flex
+  align-items: center
+  justify-content: center
+  +r(992)
+    padding-top: 94px
+  .wrapper
+    .top
+      background: rgba($blue, .15)
+      color: $blue
+      width: 192px
+
+    .timer
+      span
+        color: $blue
+        
+    .buttons
+      button
+        background: rgba(76, 172, 255, 0.62)
+        &:first-of-type,
+        &:last-of-type
+          background: rgba($blue, .15)
+        svg
+          path
+            fill: $blue
+
+  &.dark
+    .top
+      background: rgba(76, 172, 255, 0.15)
+      border-color: $bg-white
+      color: $bg-white
+      svg
+        path
+          fill: $bg-white
+    
+    .timer
+      span
+        color: $bg-white
+
+    .buttons
+      button
+        &:first-of-type,
+        &:last-of-type
+          background: rgba(76, 172, 255, 0.15)
+        svg
+          path
+            fill: $bg-white
+        

@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@100;200;300;400;500;600;700;800;900;1000&display=swap')
+  
+// colors
+$red-alpha: #A33131
+$red: #471515
+$green: #14401D
+$blue: #153047
+$bg-black: #0D0404
+$bg-white: #F2F9FF
+
+// fonts
+$rr: 'Roboto Flex', sans-serif
+$r: 'Roboto', sans-serif
+
+
+@mixin r($minSize, $maxSize: false)
+
+  @if $minSize and $maxSize
+    @media only screen and (min-width: $minSize + 'px') and (max-width: $maxSize + 'px')
+      @content
+
+  @else
+    @media only screen and (min-width: $minSize + 'px')
+      @content

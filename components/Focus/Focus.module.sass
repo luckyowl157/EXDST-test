@@ -1,0 +1,51 @@
+@import ../../styles/settings
+
+.focusSection
+  background: #FFF2F2
+  height: 100vh
+  display: flex
+  align-items: center
+  justify-content: center
+  +r(992)
+    padding-top: 94px
+    
+  .wrapper
+    .top
+      background: rgba(255, 76, 76, 0.15)
+      max-width: 136px
+      height: 48px
+      color: $red
+
+    .timer
+      span
+        color: $red
+
+    .buttons
+
+      button
+        background: rgba(255, 76, 76, .71)
+        &:first-of-type,
+        &:last-of-type
+          background: rgba(255, 76, 76, 0.15)
+  
+  &.dark
+    .top
+      background: rgba(255, 76, 76, 0.15)
+      border-color: $bg-white
+      color: $bg-white
+      svg
+        path
+          fill: $bg-white
+    
+    .timer
+      span
+        color: $bg-white
+
+    .buttons
+      button
+        &:first-of-type,
+        &:last-of-type
+          background: rgba(255, 76, 76, 0.15)
+        svg
+          path
+            fill: $bg-white

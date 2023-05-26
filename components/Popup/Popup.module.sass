@@ -1,0 +1,206 @@
+@import ../../styles/settings
+
+.popup
+  position: fixed
+  top: 0
+  bottom: 0
+  height: 100%
+  width: 100%
+  left: 0
+  right: 0
+  display: flex
+  justify-content: center
+  flex-direction: row
+  align-items: center
+  
+
+  .overlay
+    position: absolute
+    top: 0px
+    bottom: 0
+    left: 0
+    right: 0
+    transition: all 0.3s ease
+  
+  &.focusPopup
+    .overlay
+      background: rgba($red, 0.45)
+    .top
+      span
+        color: $red
+      .close
+        svg
+          path
+            fill: $red
+    
+    &.darkModal
+      .top
+        span
+          color: #FFF2F2
+        
+        .close
+          svg
+            path
+              fill: #FFF2F2
+
+      .content
+        ul
+          li
+            span
+              color: #FFF2F2
+
+    .modalWrap
+      background: #FFF2F2
+      box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.039), 0px 5.5px 16px rgba(0, 0, 0, 0.19)
+    
+    .content
+      ul
+        li
+          span
+            color: $red
+  
+  &.shortBreak
+    .overlay
+      background: rgba($green, 0.45)
+    .top
+      span
+        color: $green
+
+      .close
+        svg
+          path
+            fill: $green
+    
+    &.darkModal
+      .top
+        span
+          color: $bg-white
+        
+        .close
+          svg
+            path
+              fill: $bg-white
+
+    .modalWrap
+      background: #F2FFF5
+      box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.039), 0px 5.5px 16px rgba(0, 0, 0, 0.19)
+      
+    .content
+      ul
+        li
+          span
+            color: $green 
+
+  &.longBreak
+    .overlay  
+      background: rgba($blue, 0.45)
+    .top
+      span
+        color: $blue
+
+      .close
+        svg
+          path
+            fill: $blue
+
+    &.darkModal
+      .top
+        span
+          color: $bg-white
+        
+        .close
+          svg
+            path
+              fill: $bg-white
+
+    .modalWrap
+      background: #F2F9FF
+      box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.039), 0px 5.5px 16px rgba(0, 0, 0, 0.19)
+
+    .content
+      ul
+        li
+          span
+            color: $blue
+
+  &.darkModal
+    .modalWrap
+      background: #0D0404
+      .content
+        ul
+          li
+            span,
+            input
+              color: $bg-white
+            input
+              background: $bg-black
+              border: 1px solid rgba(255, 255, 255, 0.15)
+              border-radius: 8px
+.modalWrap  
+  max-width: 448px
+  width: 100%
+  border-radius: 24px
+  padding: 40px 24px 8px
+  z-index: 10
+  position: relative
+  transition: all .5s ease-in-out
+  transform: translateY(0px)
+
+  .top
+    display: flex
+    align-items: center
+    justify-content: space-between
+    font-family: $rr
+    position: relative
+    bottom: 13px
+    span
+      font-size: 24px
+      letter-spacing: .15px
+      line-height: 28px
+      font-weight: 700
+    .close 
+      top: 5px
+      right: 8px
+      position: absolute
+      cursor: pointer
+
+  .content
+    +r(992)
+      padding-top: 22px
+    ul
+      padding: 0
+      margin: 0
+      li
+        display: flex
+        justify-content: space-between
+        align-items: center
+        font-family: $rr
+        font-weight: 400
+        height: 64px
+        +r(992)
+          padding-bottom: 17px
+
+        span
+          font-weight: 400
+          font-size: 16px
+          line-height: 19px
+          letter-spacing: .05px
+
+        input 
+          width: 96px
+          height: 40px
+          border-radius: 8px
+          border: 1px solid rgba(0,0,0, .15)
+          padding: 0 5px 0 23px
+          font-size: 16px
+          font-family: $rr
+          font-weight: 400
+          line-height: 19px
+          display: flex
+          align-items: center
+          justify-content: center
+          letter-spacing: .15px
+          color: $red
+          appearance: textfield
+          -moz-appearance: textfield
+          position: relative

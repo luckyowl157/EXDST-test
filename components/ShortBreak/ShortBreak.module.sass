@@ -1,0 +1,52 @@
+@import ../../styles/settings
+
+.shortSection
+  height: 100vh
+  display: flex
+  align-items: center
+  justify-content: center
+  +r(992)
+    padding-top: 94px
+  .wrapper
+    .top
+      background: rgba($green, .15)
+      color: $green
+      max-width: 196px
+
+    .timer
+      span
+        color: $green
+
+    .buttons
+      
+      button
+        background: rgba(77, 218, 110, 0.62)
+        &:first-of-type,
+        &:last-of-type
+          background: rgba($green, .15)
+        svg
+          path
+            fill: $green
+
+  &.dark
+    .top
+      background: rgba(77, 218, 110, 0.15)
+      border-color: $bg-white
+      color: $bg-white
+      svg
+        path
+          fill: $bg-white
+    
+    .timer
+      span
+        color: $bg-white
+
+    .buttons
+      button
+        &:first-of-type,
+        &:last-of-type
+          background: rgba(77, 218, 110, 0.15)
+        svg
+          path
+            fill: $bg-white
+        

@@ -1,0 +1,60 @@
+@import ../../styles/settings
+
+.lightToggle
+  .slider
+    background-color: rgba(0, 0, 0, 0.24)
+    &::before
+      background-color: $bg-white
+  input:checked + .slider
+    background: rgba(0, 0, 0, .24)
+
+.darkToggle
+  .slider
+    background: rgba(255, 255, 255, 0.24)
+    &::before
+      background-color: $bg-black
+  input:checked + .slider
+    background: rgba(255, 255, 255, 0.24)
+
+.switch 
+  position: relative
+  display: inline-block
+  width: 34px
+  height: 20px
+  outline: none
+  input 
+    position: absolute
+    top: -99999px
+    left: -99999px
+
+.slider 
+  position: absolute
+  cursor: pointer
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  -webkit-transition: .4s
+  transition: .4s
+  border-radius: 34px
+  &::before 
+    position: absolute
+    content: ""
+    height: 16px
+    width: 16px
+    left: 3px
+    bottom: 2px
+    -webkit-transition: .4s
+    transition: .4s
+    border-radius: 50%
+
+// input:checked + .slider 
+//   background: rgba(0, 0, 0, .24)
+
+// input:focus + .slider 
+//   box-shadow: 0 0 1px #2196F3
+
+input:checked + .slider:before 
+  -webkit-transform: translateX(13px)
+  -ms-transform: translateX(13px)
+  transform: translateX(13px)
